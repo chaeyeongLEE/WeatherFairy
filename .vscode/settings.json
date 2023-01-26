@@ -1,0 +1,13 @@
+/* vs코드에서 자바스크립트로 작업을 할 때 rule을 따르겠다. */
+{
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
