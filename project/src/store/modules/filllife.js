@@ -1,9 +1,58 @@
-//초기 상태 설정
-const initState = {};
+const _SAVE = 'DATA_SAVE';
 
-//리듀서 만들기
+export const dataSave = (inputData) => ({
+  type: _SAVE,
+  inputData: {
+    date: TodayTime(),
+    title: inputData.title,
+    content: inputData.content,
+  },
+});
 
-export default function filllife(state = initState, action) {
+const TodayTime = () => {
+  let now = new Date(); // 현재 날짜 및 시간
+  let todayMonth = now.getMonth() + 1; // 월
+  let todayDate = now.getDate(); // 일
+  const week = ['일', '월', '화', '수', '목', '금', '토'];
+  let dayOfWeek = week[now.getDay()]; // 요일
+  let hours = now.getHours(); // 시간
+  let minutes = now.getMinutes(); // 분
+
+  return (
+    todayMonth +
+    '월' +
+    todayDate +
+    '일 ' +
+    dayOfWeek +
+    '요일 ' +
+    hours +
+    '시' +
+    minutes +
+    '분'
+  );
+};
+
+const initialState = {
+  lastdate: '',
+  inputData: [
+    {
+      title: '',
+      content: '',
+    },
+  ],
+};
+
+export default function filllife(state = initialState, action) {
   switch (action.type) {
+    case _SAVE:
+      console.log(state.inputData);
+      return {
+        data: { TodayTime },
+        inputData: state.inputData.concat({
+          ...action.inputData,
+        }),
+      };
+    default:
+      return state;
   }
 }
