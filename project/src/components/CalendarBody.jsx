@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Dates from './CalendarDates';
+import { useSelector, useDispatch } from 'react-redux';
 // import axios from 'axios';
 
 function CalendarBody(props) {
+  const diaries = useSelector((state) => state.diaries);
+  const dispatch = useDispatch();
+  console.log(diaries);
   const { totalDate, today, month, year } = props;
   const lastDate = totalDate.indexOf(1);
   const firstDate = totalDate.indexOf(1, 7);
@@ -13,6 +17,19 @@ function CalendarBody(props) {
   //today
   const findToday = totalDate.indexOf(today);
   const getMonth = new Date().getMonth() + 1;
+
+  const writeDiary = () => {
+    const action = {
+      type: 'WRITE',
+      payload: {
+        date: '2023-01-28',
+        title: '1230',
+        content: '123123',
+      },
+    };
+
+    dispatch(action);
+  };
 
   useEffect(() => {}, [month]);
   return (
@@ -32,6 +49,14 @@ function CalendarBody(props) {
           ></Dates>
         );
       })}
+      <button
+        type="button"
+        onClick={() => {
+          writeDiary();
+        }}
+      >
+        버튼
+      </button>
     </Form>
   );
 }
