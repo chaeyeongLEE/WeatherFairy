@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Modal from './CalendarModal';
 
-const CalendarDates = (props) => {
+function CalendarDates(props) {
   const { lastDate, firstDate, elm, findToday, month, year, idx, holiday } =
     props;
 
@@ -80,7 +80,7 @@ const CalendarDates = (props) => {
       </Form>
     </>
   );
-};
+}
 const Form = styled.li`
   position: relative;
   padding: 0 0.6vw;
