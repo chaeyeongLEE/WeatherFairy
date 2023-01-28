@@ -1,76 +1,49 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import filllife from '../store/modules/filllife';
-//import { dataSave } from '@modules/filllife';
-//import { useHistory } from 'rect-router-dom';
+import React from 'react';
+import { useState } from 'react';
 
-function Content() {
-  // title, content 를 제어하기 위해 선언
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+export default function Content() {
+  const [values, setValues] = useState({
+    date: '',
+    title: '',
+    content: '',
+  });
 
-  // 함수형 컴포넌트에서 useDispatch 사용을 위해 선언
-  const dispatch = useDispatch();
-
-  //data dispatch 후 list 페이지로 이동하기 위해 선언
-  // const history = useHistory();
-
-  const onSave = () => {
-    // reducer 에 선언된 초기값과 동일한 타입으로 data 값 설정
-    const _inputData = {
-      title: title,
-      content: content,
-    };
-    // 리듀서의 dataSave 함수에 dispatch
-    dispatch(dataSave(_inputData));
-    // input 값 reset
-    setTitle('');
-    setContent('');
-    // data dispatch 후 페이지 이동
-    // history.push('/');
-    // 페이지 이동 시 footer 의 button 설정을 위해 dispatch
-  };
-
-  // input 값이 onChange 될 때마다 호출되어 setTitle, setContent 에 값을 넣어 제어한다.
-  const handleTitle = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const handleContent = (e) => {
-    setContent(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
   };
 
   return (
-    <div>
-      <h2>오늘의 채움은 무엇인가요?</h2>
-      <div>
-        <div>
-          <input
-            type="text"
-            className="inputTitle"
-            placeholder="제목을 입력하세요"
-            onChange={handleTitle}
-            value={title}
-          />
-        </div>
+    <form>
+      <label htmlFor="date">날짜</label>
+      <input
+        id="date"
+        type="date"
+        name="date"
+        value={values.date}
+        onChange={handleChange}
+      />
 
-        <div>
-          <textarea
-            className="inputContent"
-            placeholder="내용을 입력하세요"
-            onChange={handleContent}
-            value={content}
-          />
-        </div>
-
-        <div>
-          <button type="button" onClick={onSave}>
-            등록하기
-          </button>
-        </div>
-      </div>
-    </div>
+      <label htmlFor="title">제목</label>
+      <input
+        id="title"
+        type="text"
+        name="title"
+        value={values.title}
+        onChange={handleChange}
+      />
+      <label htmlFor="content">내용</label>
+      <input
+        id="content"
+        type="text"
+        name="content"
+        value={values.content}
+        onChange={handleChange}
+      />
+      <button type="submit">검색</button>
+    </form>
   );
 }
-
-export default Content;
