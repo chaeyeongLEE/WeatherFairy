@@ -11,7 +11,7 @@ export default function Calendar() {
   const [year, setYear] = useState(YEAR);
   const [totalDate, setTotalDate] = useState([]);
 
-  const changeDate = (month) => {
+  function changeDate(month) {
     //이전 날짜
     let PVLastDate = new Date(YEAR, month - 1, 0).getDate();
     let PVLastDay = new Date(YEAR, month - 1, 0).getDay();
@@ -41,7 +41,7 @@ export default function Calendar() {
     ToDay = [...Array(ThisLasyDate + 1).keys()].slice(1);
 
     return PVLD.concat(ToDay, TLD);
-  };
+  }
 
   useEffect(() => {
     setTotalDate(changeDate(7));
