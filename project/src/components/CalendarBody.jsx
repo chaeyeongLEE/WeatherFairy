@@ -13,32 +13,8 @@ function CalendarBody(props) {
   //today
   const findToday = totalDate.indexOf(today);
   const getMonth = new Date().getMonth() + 1;
-  // const runAxios = async () => {
-  //   try {
-  //     const res = await axios.get(
-  //       `http://localhost:8000/?solYear=${year}&solMonth=${month}`,
-  //       requestOptions
-  //     );
-  //     console.log(res.data);
-  //     setHoliday(res.data);
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
 
-  // const requestOptions = {
-  //   method: 'GET',
-  //   redirect: 'follow',
-  //   headers: {
-  //     'Access-Control-Allow-Origin': '*',
-  //     'Access-Control-Allow-Headers': 'Content-Type',
-  //     'Access-Control-Allow-Methods': 'OPTIONS,POST,GET',
-  //   },
-  // };
-
-  useEffect(() => {
-    // runAxios();
-  }, [month]);
+  useEffect(() => {}, [month]);
   return (
     <Form>
       {totalDate.map((elm, idx) => {

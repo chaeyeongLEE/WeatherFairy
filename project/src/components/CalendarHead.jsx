@@ -19,10 +19,11 @@ const Year = styled.div`
   font-size: 2rem;
   font-weight: 700;
 `;
-// margin: 0 1vw 0 0;
 const BtnBox = styled.div`
   ${({ theme }) => theme.flexSet('space-between', 'center')}
-  width: 296.44px; ;
+  width: 296.44px;
+  margin: 0 1vw 0 0;
+  padding: 3vw;
 `;
 const Btn = styled.li`
   padding: 0.2vw 0.2vw 0.1vw;
