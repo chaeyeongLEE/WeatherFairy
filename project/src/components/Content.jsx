@@ -65,7 +65,7 @@ function Content() {
 
         <div>
           <button type="button" onClick={onSave}>
-            submit
+            등록하기
           </button>
         </div>
       </div>
