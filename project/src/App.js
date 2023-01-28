@@ -1,11 +1,9 @@
-import './App.css';
-// import Calendar from './components/Calendar';
-import Start from './pages/Start';
+import Filllife from './components/Filllife';
 
 function App() {
   return (
     <>
-      <Start />
+      <Filllife />
     </>
   );
 }

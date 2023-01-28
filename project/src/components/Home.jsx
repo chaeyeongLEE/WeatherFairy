@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import '../style/HomeCss.css';
+import '../styles/HomeCss.css';
 
 export default function Home() {
   const initstate = useSelector((state) => state);

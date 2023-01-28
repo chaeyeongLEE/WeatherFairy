@@ -1,49 +1,59 @@
-import React from 'react';
-import { useState } from 'react';
+// import React from 'react';
+// import { useState } from 'react';
+// import '../styles/Content.css';
 
-export default function Content() {
-  const [values, setValues] = useState({
-    date: '',
-    title: '',
-    content: '',
-  });
+// //state로 모두 저장은 해야됨.
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
-  };
+// export default function Content() {
+//   const [values, setValues] = useState({
+//     date: '',
+//     title: '',
+//     content: '',
+//   });
+//   const dateValue = document.getElementById('date');
+//   const titleValue = document.getElementById('date');
 
-  return (
-    <form>
-      <label htmlFor="date">날짜</label>
-      <input
-        id="date"
-        type="date"
-        name="date"
-        value={values.date}
-        onChange={handleChange}
-      />
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setValues((prevValues) => ({
+//       ...prevValues,
+//       [name]: value,
+//     }));
+//     console.log(dateValue);
+//   };
 
-      <label htmlFor="title">제목</label>
-      <input
-        id="title"
-        type="text"
-        name="title"
-        value={values.title}
-        onChange={handleChange}
-      />
-      <label htmlFor="content">내용</label>
-      <input
-        id="content"
-        type="text"
-        name="content"
-        value={values.content}
-        onChange={handleChange}
-      />
-      <button type="submit">검색</button>
-    </form>
-  );
-}
+//   return (
+//     <form>
+//       <label>날짜</label>
+//       <input
+//         id="date"
+//         type="date"
+//         name="date"
+//         value={values.date}
+//         onChange={handleChange}
+//       />
+//       <br />
+
+//       <label>제목</label>
+//       <input
+//         id="title"
+//         type="text"
+//         name="title"
+//         value={setValues(values.title)}
+//         onChange={handleChange}
+//       />
+//       <br />
+
+//       <label>내용</label>
+//       <input
+//         id="content"
+//         type="text"
+//         name="content"
+//         value={values.content}
+//         onChange={handleChange}
+//       />
+//       <br />
+//       <button type="submit">등록하기</button>
+//     </form>
+//   );
+// }
