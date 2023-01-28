@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Form = styled.section`
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   border: 2px solid #e4e3e6;
   border-radius: 2px;
 `;
