@@ -1,10 +1,9 @@
-import './App.css';
-import Calendar from './components/Calendar';
+import Filllife from './components/Filllife';
 
 function App() {
   return (
     <>
-      <Calendar />
+      <Filllife />
     </>
   );
 }
