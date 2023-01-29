@@ -1,9 +1,11 @@
-import Filllife from './components/Filllife';
+// import Filllife from './components/Filllife';
+import Weather from './components/Weather';
+import './App.css';
 
 function App() {
   return (
     <>
-      <Filllife />
+      <Weather />
     </>
   );
 }
