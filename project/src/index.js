@@ -8,10 +8,15 @@ import App from './App';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import rootReducer from './store';
+import { BrowserRouter } from 'react-router-dom';
 
 const store = configureStore({ reducer: rootReducer });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
 reportWebVitals();

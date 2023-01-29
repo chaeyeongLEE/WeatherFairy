@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Location from './Location';
+import Header from './Header';
 
 class Weather extends Component {
   constructor(props) {
@@ -33,9 +35,11 @@ class Weather extends Component {
     } else {
       return (
         <div>
+          <Header />
           <img src={imgSrc} alt="" />
           <p>{tempCeil}°C</p>
           <p>{this.state.desc}</p>
+          <Location />
         </div>
       );
     }
