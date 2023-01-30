@@ -4,26 +4,11 @@ import styled from 'styled-components';
 import Header from './Header';
 import Location from './Location';
 
-const Div = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 const Div2 = styled.div`
   display: flex;
   justify-content: center;
   float: left;
   width: 200px;
-`;
-const Table = styled.table`
-  border: 2px solid #ddd;
-  border-radius: 0.5em;
-  padding: 10px;
-`;
-
-const Input = styled.input`
-  height: 200px;
-  width: 95%;
 `;
 
 class Weather extends Component {
@@ -52,7 +37,8 @@ class Weather extends Component {
   render() {
     const imgSrc = `http://openweathermap.com/img/w/${this.state.icon}.png`;
     let temp = this.state.temp;
-    let tempCeil = Math.ceil(temp * 100) / 100;
+    let tempCeil = Math.round(temp * 100) / 100;
+
     if (this.state.loading) {
       return <p>Loading</p>;
     } else {
@@ -75,39 +61,9 @@ class Weather extends Component {
               </tr>
             </table>
           </Div2>
-          <Div>
-            <Div></Div>
-            <Table>
-              <tr>
-                <td>
-                  날짜: <input type="text" placeholder="YYYY-MM-DD"></input>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  제목:{' '}
-                  <input type="text" placeholder="제목을 입력하십시오."></input>
-                </td>
-              </tr>
-              <tr>
-                <td>내용</td>
-              </tr>
-              <tr>
-                <td>
-                  <Input type="text"></Input>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <button>등록</button>
-                </td>
-              </tr>
-            </Table>
-          </Div>
         </>
       );
     }
   }
 }
-
 export default Weather;
