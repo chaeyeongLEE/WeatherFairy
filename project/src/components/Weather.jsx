@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Location from './Location';
+import styled from 'styled-components';
 import Header from './Header';
+
+const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Div2 = styled.div`
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 200px;
+`;
+const Table = styled.table`
+  border: 2px solid #ddd;
+  border-radius: 0.5em;
+  padding: 10px;
+`;
+
+const Input = styled.input`
+  height: 200px;
+  width: 95%;
+`;
 
 class Weather extends Component {
   constructor(props) {
@@ -34,13 +56,51 @@ class Weather extends Component {
       return <p>Loading</p>;
     } else {
       return (
-        <div>
-          <Header />
-          <img src={imgSrc} alt="" />
-          <p>{tempCeil}°C</p>
-          <p>{this.state.desc}</p>
-          <Location />
-        </div>
+        <>
+          <Div2>
+            <table>
+              <tr>
+                <img src={imgSrc} alt="" />
+              </tr>
+              <tr>
+                <span>{tempCeil}°C</span>
+              </tr>
+              <tr>
+                <p>{this.state.desc}</p>
+              </tr>
+            </table>
+          </Div2>
+          <Div>
+            <Div></Div>
+            <Table>
+              <tr>
+                <td>
+                  날짜:{' '}
+                  <input type="text" placeholder="제목을 입력하십시오."></input>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  제목:{' '}
+                  <input type="text" placeholder="제목을 입력하십시오."></input>
+                </td>
+              </tr>
+              <tr>
+                <td>내용</td>
+              </tr>
+              <tr>
+                <td>
+                  <Input type="text" placeholder="리뷰를 입력하십시오."></Input>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button>등록</button>
+                </td>
+              </tr>
+            </Table>
+          </Div>
+        </>
       );
     }
   }
