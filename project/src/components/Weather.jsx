@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import Header from './Header';
+import Location from './Location';
 
 const Div = styled.div`
   display: flex;
@@ -57,8 +58,12 @@ class Weather extends Component {
     } else {
       return (
         <>
+          <Header />
           <Div2>
             <table>
+              <tr>
+                <Location />
+              </tr>
               <tr>
                 <img src={imgSrc} alt="" />
               </tr>
@@ -75,8 +80,7 @@ class Weather extends Component {
             <Table>
               <tr>
                 <td>
-                  날짜:{' '}
-                  <input type="text" placeholder="제목을 입력하십시오."></input>
+                  날짜: <input type="text" placeholder="YYYY-MM-DD"></input>
                 </td>
               </tr>
               <tr>
@@ -90,7 +94,7 @@ class Weather extends Component {
               </tr>
               <tr>
                 <td>
-                  <Input type="text" placeholder="리뷰를 입력하십시오."></Input>
+                  <Input type="text"></Input>
                 </td>
               </tr>
               <tr>
