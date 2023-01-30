@@ -1,0 +1,9 @@
+li {
+  display: block;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: pink;
+  border-color: black;
+}
