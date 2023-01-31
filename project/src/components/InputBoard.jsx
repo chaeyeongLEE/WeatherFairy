@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Board from './Board';
+import BoardItem from './BoardItem';
 
 const Table = styled.table`
   border: 2px solid #ddd;
@@ -23,7 +23,12 @@ export default function InputBoard() {
   //배열형태의 useState
 
   const addItem = () => {
-    setList([...List, inputDate, inputTitle, inputContent]);
+    var data = {
+      date: inputDate,
+      title: inputTitle,
+      content: inputContent,
+    };
+    setList([...List, data]);
   };
   return (
     <>
@@ -63,15 +68,14 @@ export default function InputBoard() {
         </tr>
         <tr>
           <td>
-            {' '}
-            <Link to="/board" state={{ data: List }}>
-              <button onClick={addItem}>등록</button>
-            </Link>
+            <button onClick={addItem}>등록</button>
           </td>
         </tr>
       </Table>
       <div>
-        <Board List={List} />
+        {List.map((list) => {
+          return <BoardItem list={list} />;
+        })}
       </div>
     </>
   );
