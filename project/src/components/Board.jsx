@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import BoardItem from './BoardItem';
 import Header from './Header';
 
@@ -15,7 +14,7 @@ const Input = styled.input`
   width: 95%;
 `;
 
-export default function InputBoard() {
+export default function Board() {
   const [inputDate, setInputDate] = useState('');
   const [inputTitle, setInputTitle] = useState('');
   const [inputContent, setInputContent] = useState('');
