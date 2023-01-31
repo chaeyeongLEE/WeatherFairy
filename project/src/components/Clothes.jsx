@@ -6,7 +6,7 @@ export default function Clothes2(temp) {
   if (tC <= 5) {
     return (
       <>
-        <div>겨울 옷(야상, 패딩, 목도리 등등 다)</div>
+      <div>겨울 옷(야상, 패딩, 목도리 등등 다)</div>
       </>
     );
   } else if (tC < 10) {
@@ -45,7 +45,7 @@ export default function Clothes2(temp) {
         <div>반팔, 얇은 셔츠, 얇은 긴팔, 반바지, 면바지</div>
       </>
     );
-  } else {
+  } else if ( tC < 100){
     return (
       <>
         <div>나시티, 반바지, 민소매 원피스</div>
