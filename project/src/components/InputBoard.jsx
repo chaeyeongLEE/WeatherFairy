@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import BoardItem from './BoardItem';
+import Header from './Header';
 
 const Table = styled.table`
   border: 2px solid #ddd;
@@ -32,14 +33,15 @@ export default function InputBoard() {
   };
   return (
     <>
+      <Header />
       <Table>
         <tr>
           <td>
             날짜:{' '}
             <input
               value={inputDate}
-              type="text"
-              placeholder="YYYY-MM-DD"
+              type="date"
+              //placeholder="YYYY-MM-DD"
               onChange={(event) => setInputDate(event.target.value)}
             />
           </td>
