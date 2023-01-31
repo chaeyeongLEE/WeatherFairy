@@ -1,11 +1,12 @@
 import React from 'react';
-import CalendarPage from '../components/CalendarPage';
+import Header from '../components/Header';
+import Weather from '../components/Weather';
 
 export default function Start() {
   return (
     <>
-      {/* 헤더, 메인 페이지 두개 */}
-      <CalendarPage />
+      <Header />
+      <Weather />
     </>
   );
 }

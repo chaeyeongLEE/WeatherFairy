@@ -38,14 +38,13 @@ class Weather extends Component {
   render() {
     const imgSrc = `http://openweathermap.com/img/w/${this.state.icon}.png`;
     let temp = this.state.temp;
-    let tempCeil = Math.round(temp);
+    let tC = Math.round(temp);
 
     if (this.state.loading) {
       return <p>Loading</p>;
     } else {
       return (
         <>
-          <Header />
           <Div2>
             <table>
               <tr>
@@ -55,13 +54,13 @@ class Weather extends Component {
                 <img src={imgSrc} alt="" />
               </tr>
               <tr>
-                <span>{tempCeil}°C</span>
+                <span>{tC}°C</span>
               </tr>
               <tr>
                 <p>{this.state.desc}</p>
               </tr>
             </table>
-            <Clothes temp={tempCeil} />
+            <Clothes temp={tC} />
           </Div2>
         </>
       );
