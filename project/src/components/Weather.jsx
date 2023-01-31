@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import Header from './Header';
 import Location from './Location';
 import Clothes from './Clothes';
 
