@@ -3,13 +3,16 @@ import React from 'react';
 export default function Clothes2(temp) {
   const tC = parseInt(temp.temp);
   console.log(tC);
+  if ( tc <= 5 )
+  else if ( tc < 10 )
+  else if ( tc < 15 )
   if (27 < tC) {
     return (
       <>
         <div>나시티, 반바지, 민소매 원피스</div>
       </>
     );
-  } else if (23 <= tC <= 27) {
+  } else if (23 <= tC && tC <= 27) {
     return (
       <>
         <div>반팔, 얇은 셔츠, 얇은 긴팔, 반바지, 면바지</div>
