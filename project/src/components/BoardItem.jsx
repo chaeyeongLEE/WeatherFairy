@@ -12,21 +12,22 @@ const Input = styled.input`
   width: 95%;
 `;
 
-export default function BoardItem(props) {
+export default function BoardItem({ list }) {
+  console.log(list);
   return (
     <>
       <Table>
         <tr>
-          <td>날짜:{props.item}</td>
+          <td>날짜:{list.date}</td>
         </tr>
         <tr>
-          <td>제목: {props.item}</td>
+          <td>제목: {list.title}</td>
         </tr>
         <tr>
           <td>내용</td>
         </tr>
         <tr>
-          <td>{props.item}</td>
+          <td>{list.content}</td>
         </tr>
         <tr>
           <td>
@@ -34,7 +35,6 @@ export default function BoardItem(props) {
           </td>
         </tr>
       </Table>
-      <div className="board-item">{props.item}</div>
     </>
   );
 }
