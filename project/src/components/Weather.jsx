@@ -3,7 +3,8 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Header from './Header';
 import Location from './Location';
-import Weather2 from './Weather2';
+import Clothes from './Clothes';
+
 const Div2 = styled.div`
   display: flex;
   justify-content: center;
@@ -37,8 +38,8 @@ class Weather extends Component {
   render() {
     const imgSrc = `http://openweathermap.com/img/w/${this.state.icon}.png`;
     let temp = this.state.temp;
-    // let tempCeil = Math.round(temp * 100) / 100;
     let tempCeil = Math.round(temp);
+
     if (this.state.loading) {
       return <p>Loading</p>;
     } else {
@@ -60,8 +61,8 @@ class Weather extends Component {
                 <p>{this.state.desc}</p>
               </tr>
             </table>
+            <Clothes temp={tempCeil} />
           </Div2>
-          <Weather2 />
         </>
       );
     }
