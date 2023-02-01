@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import Location from './Location';
 import Clothes from './Clothes';
 
 const Div2 = styled.div`
-  display: flex;
+  background-color: #f5e9db;
+  width: 420px;
+  display: relative;
   justify-content: center;
-  float: left;
-  width: 200px;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 630px;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
 `;
 
 class Weather extends Component {
@@ -45,22 +50,32 @@ class Weather extends Component {
       return (
         <>
           <Div2>
-            <table>
-              <tr>
+            <span
+              style={{
+                color: 'brown',
+                fontSize: '22px',
+                textShadow: '2px 2px 2px gray',
+              }}
+            >
+              {/* <tr>
                 <Location />
-              </tr>
-              <tr>
-                <img src={imgSrc} alt="" />
-              </tr>
-              <tr>
+              </tr> */}
+              <img
+                src={imgSrc}
+                alt=""
+                style={{ height: '100px', width: '100px' }}
+              />
+              <p>
                 <span>{tC}°C</span>
-              </tr>
-              <tr>
-                <p>{this.state.desc}</p>
-              </tr>
-            </table>
-            <Clothes temp={tC} />
+                <br />
+                {this.state.desc}
+              </p>
+            </span>
           </Div2>
+          <br />
+          <>
+            <Clothes temp={tC} />
+          </>
         </>
       );
     }
