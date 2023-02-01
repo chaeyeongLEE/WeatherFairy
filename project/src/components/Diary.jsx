@@ -11,11 +11,11 @@ const Div = styled.div`
 
 export default function Diary() {
   return (
-    <body>
+    <>
       <Header />
       <Div>
         <Board />
       </Div>
-    </body>
+    </>
   );
 }

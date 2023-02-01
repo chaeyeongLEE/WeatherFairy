@@ -9,7 +9,7 @@ export default function Header() {
   const imgStyle = { width: '40px' };
   return (
     <>
-      <nav>
+      <nav className="header">
         <ul style={{ display: 'flex', justifyContent: 'space-around' }}>
           <li>
             <img src={fairyImg} alt="날씨 요정" style={imgStyle}></img>
