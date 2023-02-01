@@ -2,8 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const DateDiv = styled.div`
-  background-color: bisque;
-  width: 125px;
+  background-color: #c2d0b9;
+  width: 420px;
+  display: relative;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 2px #4a762f;
+  font-size: 20px;
+  margin-top: -17px;
+  margin-right: -625px;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
 `;
 
 export default function Location() {
@@ -33,5 +43,5 @@ export default function Location() {
     return `${day} ${date} ${month} ${year}`;
   };
 
-  return <DateDiv>{dateBuilder(new Date())}</DateDiv>;
+  return <DateDiv> ♥ --- {dateBuilder(new Date())} --- ♥ </DateDiv>;
 }
