@@ -11,12 +11,12 @@ import summer5Img from '../summer5.jpg';
 
 const Img = styled.img`
   width: 563px;
-  height: 626px;
+  height: 560px;
   margin-left: 40px;
   border-radius: 1rem;
   position: absolute;
   @media screen and (max-width: 700px) {
-    margin-top: 650px;
+    margin-top: 580px;
     margin-left: 640px;
     width: 450px;
   }

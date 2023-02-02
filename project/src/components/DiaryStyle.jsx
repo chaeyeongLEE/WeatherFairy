@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Diary from './Diary';
-import Header from './Header';
+import DiaryHeader from './DiaryHeader';
 
 export default function DiaryStyle() {
   const [tempData, setTempData] = useState('');
@@ -28,7 +28,7 @@ export default function DiaryStyle() {
   } else if (temp <= 5) {
     return (
       <>
-        <Header />
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
@@ -42,7 +42,7 @@ export default function DiaryStyle() {
   } else if (temp < 10) {
     return (
       <>
-        <Header />
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #96b9da6f, #7850c9',
@@ -56,6 +56,7 @@ export default function DiaryStyle() {
   } else if (temp < 12) {
     return (
       <>
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
@@ -69,6 +70,7 @@ export default function DiaryStyle() {
   } else if (temp < 17) {
     return (
       <>
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
@@ -82,6 +84,7 @@ export default function DiaryStyle() {
   } else if (temp < 20) {
     return (
       <>
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
@@ -95,6 +98,7 @@ export default function DiaryStyle() {
   } else if (temp < 23) {
     return (
       <>
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
@@ -108,6 +112,7 @@ export default function DiaryStyle() {
   } else if (temp < 27) {
     return (
       <>
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
@@ -121,6 +126,7 @@ export default function DiaryStyle() {
   } else if (temp < 100) {
     return (
       <>
+        <DiaryHeader />
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',

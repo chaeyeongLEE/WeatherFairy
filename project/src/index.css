@@ -13,3 +13,8 @@ ul{
   list-style:none;
   padding-left:0px;
   }
+
+  *{
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-weight: 600;
+}

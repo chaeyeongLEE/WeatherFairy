@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Clothes from '../components/Clothes';
 // import Location from '../components/Location';
 import Weather from '../components/Weather';
-import '../styles/start.css';
+import '../styles/Start.css';
 
 export default function Start() {
   <>
