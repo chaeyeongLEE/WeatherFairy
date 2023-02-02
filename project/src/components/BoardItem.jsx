@@ -10,10 +10,10 @@ const Div = styled.div`
 const Div2 = styled.div`
   display: flex;
   width: 500px;
-  border: 2px solid #ddd;
+  border: 2px solid #1c260b;
   border-radius: 0.5em;
   padding: 10px;
-  background-color: #b6cb8e;
+  background-color: #b6cb8e5d;
 `;
 
 const Div3 = styled.div`
@@ -24,7 +24,7 @@ const Div3 = styled.div`
   padding: 5px 10px 0px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #2e3c14;
+  background-color: #1c260b;
 `;
 //위 오른쪽 아래 왼쪽
 const Ul = styled.ul`
@@ -32,7 +32,11 @@ const Ul = styled.ul`
 `;
 const InputDate = styled.input`
   border: none;
-  background-color: #b6cb8e;
+  border-radius: 15px;
+  background-color: #e7f3d3;
+  width: 120px;
+  text-align: center;
+  margin-right: 10px;
 `;
 const Img = styled.img`
   width: 80px;
