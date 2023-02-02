@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: "project";         
-  src: url('./styles/fonts/NotoSerifAhom-Regular.ttf'); 
+  src: url('https://fonts.googleapis.com/css?family=Yeon+Sung:400'); 
 }
 
 div {

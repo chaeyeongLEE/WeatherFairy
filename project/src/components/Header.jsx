@@ -23,7 +23,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/board">
+            <Link to="/diary">
               {' '}
               <img src={diaryImg} alt="다이어리" style={imgStyle} />{' '}
             </Link>

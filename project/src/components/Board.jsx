@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import BoardItem from './BoardItem';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Div = styled.div`
   display: flex;
@@ -11,11 +12,12 @@ const Div = styled.div`
 
 const Div2 = styled.div`
   display: flex;
+  margin-top: 30px;
   width: 500px;
-  border: 2px solid #ddd;
+  border: 2px solid #1c260b;
   border-radius: 0.5em;
   padding: 10px;
-  background-color: #b6cb8e;
+  background-color: #b6cb8e5d;
 `;
 const Div3 = styled.div`
   display: flex;
@@ -25,7 +27,7 @@ const Div3 = styled.div`
   padding: 5px 10px 0px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #2e3c14;
+  background-color: #1c260b;
 `;
 //위 오른쪽 아래 왼쪽
 const Ul = styled.ul`
@@ -34,7 +36,11 @@ const Ul = styled.ul`
 
 const InputDate = styled.input`
   border: none;
-  background-color: #b6cb8e;
+  border-radius: 15px;
+  background-color: #e7f3d3;
+  width: 120px;
+  text-align: center;
+  margin-right: 10px;
 `;
 const Img = styled.img`
   width: 80px;
@@ -70,8 +76,11 @@ export default function Board() {
   const [inputTitle, setInputTitle] = useState('');
   const [inputContent, setInputContent] = useState('');
   const [imgData, setImgData] = useState('');
-  const [List, setList] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const List = useSelector((state) => state);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const cityName = 'Seoul';
     const API_KEY = '9ee15f4b701050d4006958620f3cedec';
@@ -117,14 +126,20 @@ export default function Board() {
   //배열형태의 useState
 
   const addItem = () => {
-    var data = {
-      date: dateBuilder(new Date()),
-      weather: imgData,
-      title: inputTitle,
-      content: inputContent,
+    var action = {
+      type: 'diary',
+      payload: {
+        date: dateBuilder(new Date()),
+        weather: imgData,
+        title: inputTitle,
+        content: inputContent,
+      },
     };
-    setList([...List, data]);
+    dispatch(action);
+    setInputContent('');
+    setInputTitle('');
   };
+
   if (loading) {
     return <p>Loading</p>;
   } else {
