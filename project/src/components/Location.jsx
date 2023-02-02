@@ -9,8 +9,9 @@ const DateDiv = styled.div`
   align-items: center;
   text-shadow: 2px 2px 2px #4a762f;
   font-size: 20px;
-  margin-top: -17px;
-  margin-right: -625px;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-left: 640px;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;

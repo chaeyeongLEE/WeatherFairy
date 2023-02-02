@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Clothes from '../components/Clothes';
-import Header from '../components/Header';
-import Location from '../components/Location';
+// import Location from '../components/Location';
 import Weather from '../components/Weather';
 import '../styles/Start.css';
 
@@ -21,18 +20,13 @@ export default function Start() {
     flex-direction: column;
     align-items: center;
     min-height: 22vh;
-    margin-left: '20px';
+    /* margin-left: '20px'; */
     font-family: 'Nanum Gothic Coding', monospace;
   `;
 
   return (
     <div className="total">
-      <Header />
       <Div5>
-        <hr />
-        <h1> Today's best fashion </h1>
-        <br />
-        <Location />
         <Weather />
         <Clothes />
         <br />

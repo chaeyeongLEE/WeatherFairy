@@ -1,36 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import clothes1Img from '../clothes1.jpeg';
-import clothes2Img from '../clothes2.jpeg';
-import clothes3Img from '../clothes3.jpeg';
-import summer1Img from '../summer1.jpg';
-import summer2Img from '../summer2.jpg';
-import summer3Img from '../summer3.jpg';
-import summer4Img from '../summer4.jpg';
-import summer5Img from '../summer5.jpg';
-
+const Div1 = styled.div`
+  width: 400px;
+  border-radius: 1rem;
+  margin-left: 640px;
+  align-items: center;
+  min-height: 140px;
+  margin-top: '60px';
+  background-color: #e5cace;
+  padding: 25px;
+`;
 export default function Clothes(temp) {
-  const imgStyle = {
-    width: '563px',
-    height: '626px',
-    marginTop: '193px',
-    marginLeft: '-425px',
-    borderRadius: '1rem',
-    position: 'absolute',
-  };
-
-  const Div1 = styled.div`
-    width: 450px;
-    border-radius: 1rem;
-    margin-left: 630px;
-    align-items: center;
-    min-height: 20vh;
-    margin-top: '60px';
-    background-color: #e5cace;
-    justify-content: center;
-  `;
-
   const tC = parseInt(temp.temp);
   console.log(tC);
   if (tC <= 5) {
@@ -40,11 +21,12 @@ export default function Clothes(temp) {
           {' '}
           날씨가 많이 춥습니다.
           <br />
-          두툼한 겨울 의류와 목도리, 장갑 등의 아이템을 착용하세요.
+          두툼한 겨울 의류, 보완이 철저한 외투를 입으세요.
           <br />
-          🧚🏻‍♀️ 추천 아우터 : 야상, 패딩 등 보완이 철저한 외투를 입으세요.
+          🧚🏻‍♀️ 추천 아우터 : 야상, 패딩
+          <br />
+          🧚🏻‍♀️ 추천 아이템: 목도리, 장갑
         </Div1>
-        <img src={clothes3Img} alt="겨울옷3" style={imgStyle}></img>
       </>
     );
   } else if (tC < 10) {
@@ -55,7 +37,6 @@ export default function Clothes(temp) {
           <br />
           🧚🏻‍♀️ 추천 아우터 : 코트, 가죽자켓, 경량패딩
         </Div1>
-        <img src={clothes2Img} alt="겨울옷2" style={imgStyle}></img>
       </>
     );
   } else if (tC < 12) {
@@ -67,7 +48,6 @@ export default function Clothes(temp) {
           <br />
           🧚🏻‍♀️ 추천 아우터 : 트렌치코트, 간절기 야상
         </Div1>
-        <img src={clothes1Img} alt="겨울옷1" style={imgStyle}></img>
       </>
     );
   } else if (tC < 17) {
@@ -80,7 +60,6 @@ export default function Clothes(temp) {
           <br />
           🧚🏻‍♀️ 추천 아우터 : 자켓, 가디건, 간절기 야상
         </Div1>
-        <img src={summer4Img} alt="간절기옷1" style={imgStyle}></img>
       </>
     );
   } else if (tC < 20) {
@@ -91,7 +70,6 @@ export default function Clothes(temp) {
           <br />
           🧚🏻‍♀️ 추천 아우터 : 가디건, 후드티
         </Div1>
-        <img src={summer5Img} alt="여름옷" style={imgStyle}></img>
       </>
     );
   } else if (tC < 23) {
@@ -103,7 +81,6 @@ export default function Clothes(temp) {
           <br />
           🧚🏻‍♀️ 추천 아우터 : 면바지, 면티, 슬랙스
         </Div1>
-        <img src={summer3Img} alt="여름옷" style={imgStyle}></img>
       </>
     );
   } else if (tC < 27) {
@@ -115,7 +92,6 @@ export default function Clothes(temp) {
           <br />
           🧚🏻‍♀️ 추천 의류 : 얇은 셔츠나 얇은 긴팔, 반바지
         </Div1>
-        <img src={summer1Img} alt="여름옷" style={imgStyle}></img>
       </>
     );
   } else if (tC < 100) {
@@ -127,7 +103,6 @@ export default function Clothes(temp) {
           태양이 뜨거우니 얇은 흰티를 걸치시는 것을 추천드려요. 🧚🏻‍♀️ 추천 의류 :
           얇은 셔츠, 얇은 반팔과 민소매
         </Div1>
-        <img src={summer2Img} alt="한여름" style={imgStyle}></img>
       </>
     );
   }

@@ -3,15 +3,33 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Clothes from './Clothes';
 import Micro from './Micro';
+import Location from './Location';
+import ClothesImg from './ClothesImg';
+import WeatherHeader from './WeatherHeader';
+import Header from './Header';
 
+const DivTie = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Div1 = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Div3 = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const Div2 = styled.div`
   background-color: #f5e9db;
   width: 420px;
-  display: relative;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
-  margin-left: 630px;
+  margin-left: 640px;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
@@ -49,36 +67,41 @@ class Weather extends Component {
       return <p>Loading</p>;
     } else {
       return (
-        <>
-          <Div2>
-            <span
-              style={{
-                color: 'brown',
-                fontSize: '22px',
-                textShadow: '2px 2px 2px gray',
-              }}
-            >
-              {/* <tr>
-                <Location />
-              </tr> */}
-              <img
-                src={imgSrc}
-                alt=""
-                style={{ height: '100px', width: '100px' }}
-              />
-              <p>
-                <span>{tC}°C</span>
-                <br />
-                {this.state.desc}
-              </p>
-              <Micro />
-            </span>
-          </Div2>
-          <br />
-          <>
-            <Clothes temp={tC} />
-          </>
-        </>
+        <DivTie>
+          <Header />
+          <Div>
+            <Div1>
+              <WeatherHeader />
+            </Div1>
+            <Div3>
+              <Location />
+              <ClothesImg temp={tC} />
+              <Div2>
+                <span
+                  style={{
+                    color: 'brown',
+                    fontSize: '22px',
+                    textShadow: '2px 2px 2px gray',
+                  }}
+                >
+                  <img
+                    src={imgSrc}
+                    alt=""
+                    style={{ height: '100px', width: '100px' }}
+                  />
+                  <p>
+                    <span>{tC}°C</span>
+                    <br />
+                    {this.state.desc}
+                  </p>
+                  <Micro />
+                </span>
+              </Div2>
+              <br />
+              <Clothes temp={tC} />
+            </Div3>
+          </Div>
+        </DivTie>
       );
     }
   }
