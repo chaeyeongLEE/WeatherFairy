@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Board from './Board';
-import Header from './Header';
 // import { useState } from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
