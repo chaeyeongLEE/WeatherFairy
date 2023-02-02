@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import Clothes from './Clothes';
+import Micro from './Micro';
 
 const Div2 = styled.div`
   background-color: #f5e9db;
@@ -70,6 +71,7 @@ class Weather extends Component {
                 <br />
                 {this.state.desc}
               </p>
+              <Micro />
             </span>
           </Div2>
           <br />
