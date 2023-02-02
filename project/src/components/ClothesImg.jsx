@@ -15,6 +15,11 @@ const Img = styled.img`
   margin-left: 40px;
   border-radius: 1rem;
   position: absolute;
+  @media screen and (max-width: 700px) {
+    margin-top: 650px;
+    margin-left: 640px;
+    width: 450px;
+  }
 `;
 export default function ClothesImg(temp) {
   const tC = parseInt(temp.temp);

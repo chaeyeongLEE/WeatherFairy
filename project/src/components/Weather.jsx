@@ -10,12 +10,14 @@ import Header from './Header';
 
 const DivTie = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column; ;
 `;
+
 const Div = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Div1 = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,6 +27,7 @@ const Div3 = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Div2 = styled.div`
   background-color: #f5e9db;
   width: 420px;
@@ -101,6 +104,12 @@ class Weather extends Component {
               <Clothes temp={tC} />
             </Div3>
           </Div>
+          {/* <style jsx>
+            {`
+            .Div1 {
+              color: red;
+            }
+          `}</style> */}
         </DivTie>
       );
     }
