@@ -3,14 +3,12 @@ import styled from 'styled-components';
 import Clothes from '../components/Clothes';
 // import Location from '../components/Location';
 import Weather from '../components/Weather';
-import '../styles/Start.css';
+import '../styles/start.css';
 
 export default function Start() {
   <>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://webfontworld.github.io/BMYeonSung/BMYeonSung.css"
       rel="stylesheet"
     />
   </>;
@@ -19,9 +17,18 @@ export default function Start() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 22vh;
+    min-height: 100%;
+    font-family: 'BMYeonSung';
     /* margin-left: '20px'; */
-    font-family: 'Nanum Gothic Coding', monospace;
+
+    @media screen and (max-width: 700px) {
+      width: 50%;
+      flex-direction: column;
+      display: flex;
+      text-align: center;
+      margin-left: -190px;
+      justify-content: flex-start;
+    }
   `;
 
   return (

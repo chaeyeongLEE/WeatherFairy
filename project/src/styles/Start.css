@@ -1,4 +1,14 @@
-.total {
-   font-family: 'Nanum Gothic Coding', monospace;
+.header li {
+  display: block;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(91, 64, 5);
+  border-color: black;
+  
 }
 
+.total{
+    font-family: 'Yeon Sung';
+}
