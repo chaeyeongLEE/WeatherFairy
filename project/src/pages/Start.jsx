@@ -32,9 +32,7 @@ export default function Start() {
         <hr />
         <h1> Today's best fashion </h1>
         <br />
-
         <Location />
-
         <Weather />
         <Clothes />
         <br />
