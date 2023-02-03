@@ -16,7 +16,7 @@
 |다이어리페이지|1. <br>2.|
 
 <h3> 🤍 배포 사이트 🤍 </h3>
-<a href="http://101.101.208.182:3000/"><img src="project/src/img/fairy.png"></a>
+<a href="http://101.101.208.182:3000/"><img src="project/src/fairy.png"></a>
 
 <h1> 🧚🏻 프로젝트 팀원 🧚🏻 </h1>
 
