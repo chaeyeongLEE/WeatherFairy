@@ -25,18 +25,18 @@
 |<img src="https://avatars.githubusercontent.com/u/107829964?v=4" width="100">|<img src="https://avatars.githubusercontent.com/u/116782324?v=4" width="100" >|
 |<a href="https://github.com/leechaeyeon321"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|<a href="https://github.com/chaeyeongLEE"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|
 <h1> ✍️ Stack </h1>
-<h2> 🤍Front-end🤍 </h2>
+<h4> 🤍Front-end🤍 </h4>
 <div>
-<img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" width="80"/>
+<img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" width="50"/>
 <img src="https://img.shields.io/badge/-Redux-blue"/>
 </div>
-<h2> 🤍Collaboration🤍 </h2>
+<h4> 🤍Collaboration🤍 </h4>
 <div>
-<img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" width="80"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1024px-Notion-logo.svg.png" width="80"/>
-<img src="https://cdn-icons-png.flaticon.com/512/3800/3800024.png" width="80"/>
+<img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" width="50"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1024px-Notion-logo.svg.png" width="50"/>
+<img src="https://cdn-icons-png.flaticon.com/512/3800/3800024.png" width="50"/>
 </div>
-<h2> 🤍API🤍 </h2>
+<h4> 🤍API🤍 </h4>
 <div>
 <img src="https://img.shields.io/badge/-OpenWeather-orange"/>
 </div>
