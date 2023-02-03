@@ -21,7 +21,7 @@
 |이채연(FE)|이채영(FE)|
 |:---:|:---:|
 |<img src="https://avatars.githubusercontent.com/u/107829964?v=4" width="100">|
-|<a href="https://github.com/leechaeyeon321"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a> |<img src="https://avatars.githubusercontent.com/u/116782324?v=4" width="100" >|<a href="https://github.com/chaeyeongLEE"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|
+|<a href="https://github.com/leechaeyeon321"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a> ||<img src="https://avatars.githubusercontent.com/u/116782324?v=4" width="100" >|<a href="https://github.com/chaeyeongLEE"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|
 <h1> ✍️ 기술 스택 </h1>
 <h2>  Front-end </h2>
 <div>
