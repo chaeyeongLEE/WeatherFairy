@@ -1,4 +1,4 @@
-<h1> 🤍 Weather Fairy 🤍 </h1>
+<h1> Weather Fairy </h1>
 
 <h2> 프로젝트 소개 </h2>
 <h3> 1. 기획 의도 </h3>
@@ -39,5 +39,5 @@
 </div>
 <h4> 🤍API🤍 </h4>
 <div>
-<img src="https://img.shields.io/badge/-OpenWeather-orange"/>
+  <a href="https://openweathermap.org/"><img src="https://img.shields.io/badge/-OpenWeather-orange"/></a>
 </div>
