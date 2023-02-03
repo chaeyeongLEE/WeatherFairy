@@ -1,3 +1,4 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=🤍 Weather Fairy 🤍&fontSize=90" />
 <h1> 🤍 Weather Fairy 🤍 </h1>
 
 <h2> 프로젝트 소개 </h2>
@@ -15,15 +16,15 @@
 |메인페이지|1. <br />|
 |다이어리페이지|1. <br>2.|
 
+<h3> 🤍 배포 사이트 🤍 </h3>
+<a href="http://101.101.208.182:3000/"><img src="project/src/img/fairy.png"></a>
 
-<h1> 프로젝트 팀원 </h1>
+<h1> 🧚🏻 프로젝트 팀원 🧚🏻 </h1>
 
 |이채연(FE)|이채영(FE)|
 |:---:|:---:|
-|<img src="https://avatars.githubusercontent.com/u/107829964?v=4" width="100">|
-<img src="https://avatars.githubusercontent.com/u/116782324?v=4" width="100" >|
-|<a href="https://github.com/leechaeyeon321"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>
-|<a href="https://github.com/chaeyeongLEE"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|
+|<img src="https://avatars.githubusercontent.com/u/107829964?v=4" width="100">|<img src="https://avatars.githubusercontent.com/u/116782324?v=4" width="100" >|
+|<a href="https://github.com/leechaeyeon321"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|<a href="https://github.com/chaeyeongLEE"><img src="https://img.shields.io/badge/GitHub-181717?style=plastic&logo=GitHub&logoColor=white"/></a>|
 <h1> ✍️ 기술 스택 </h1>
 <h2>  Front-end </h2>
 <div>
