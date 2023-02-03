@@ -32,7 +32,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -46,7 +46,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #96b9da6f, #7850c9',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -60,7 +60,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -74,7 +74,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -88,7 +88,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -102,7 +102,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -116,7 +116,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
@@ -130,7 +130,7 @@ export default function DiaryStyle() {
         <div
           style={{
             background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
-            height: 'calc(100vh - 66px)',
+            height: '100%',
           }}
         >
           <Diary />
