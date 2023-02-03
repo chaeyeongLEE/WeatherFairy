@@ -10,7 +10,8 @@ import Header from './Header';
 
 const DivTie = styled.div`
   display: flex;
-  flex-direction: column; ;
+  flex-direction: column;
+  position: relative;
 `;
 
 const Div = styled.div`
@@ -29,7 +30,7 @@ const Div3 = styled.div`
 `;
 
 const Div2 = styled.div`
-  background-color: #f5e9db;
+  background-color: #c9cad389;
   width: 420px;
   margin-top: 20px;
   margin-left: 640px;

@@ -5,10 +5,12 @@ const H1 = styled.h1`
   text-align: center;
   line-height: 20px;
   font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px pink; ;
 `;
 
 const Div = styled.div`
-  background-color: rgb(214, 188, 149);
+  background-color: rgba(171, 171, 216, 0.323);
   height: 50px;
   width: 985px;
   padding: 2rem;

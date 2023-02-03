@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const DateDiv = styled.div`
-  background-color: #c2d0b9;
+  background-color: #a5ab8249;
   width: 420px;
   display: relative;
   justify-content: center;

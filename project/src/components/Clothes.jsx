@@ -5,12 +5,13 @@ const Div1 = styled.div`
   width: 400px;
   border-radius: 1rem;
   margin-left: 640px;
-  align-items: center;
+  text-align: center;
   min-height: 140px;
   margin-top: '60px';
-  background-color: #e5cace;
+  background-color: #b1b9d5b8;
   padding: 25px;
 `;
+
 export default function Clothes(temp) {
   const tC = parseInt(temp.temp);
   console.log(tC);
@@ -22,6 +23,7 @@ export default function Clothes(temp) {
           날씨가 많이 춥습니다.
           <br />
           두툼한 겨울 의류, 보완이 철저한 외투를 입으세요.
+          <br />
           <br />
           🧚🏻‍♀️ 추천 아우터 : 야상, 패딩
           <br />

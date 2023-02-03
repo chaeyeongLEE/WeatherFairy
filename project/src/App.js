@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import Start from './pages/Start';
 import './App.css';
-import Diary from './components/Diary';
 import GlobalStyle from './components/GlobalStyle';
 import DiaryStyle from './components/DiaryStyle';
 
