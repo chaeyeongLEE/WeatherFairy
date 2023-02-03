@@ -28,6 +28,7 @@
 <h4> 🤍Front-end🤍 </h4>
 <div>
 <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" width="50"/>
+  <img src="https://img.shields.io/badge/-React-blue"/>
 <img src="https://img.shields.io/badge/-Redux-blue"/>
 </div>
 <h4> 🤍Collaboration🤍 </h4>
