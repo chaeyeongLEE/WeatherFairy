@@ -15,6 +15,7 @@ const Img = styled.img`
   margin-left: 40px;
   border-radius: 1rem;
   position: absolute;
+
   @media screen and (max-width: 700px) {
     margin-top: 580px;
     margin-left: 640px;
