@@ -59,7 +59,7 @@ export default function DiaryStyle() {
         <DiaryHeader />
         <div
           style={{
-            background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
+            background: 'linear-gradient(135deg, #92c96a6d, #297863',
             height: '100%',
           }}
         >
@@ -73,7 +73,7 @@ export default function DiaryStyle() {
         <DiaryHeader />
         <div
           style={{
-            background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
+            background: 'linear-gradient(135deg,  #b7ac5e6c, #637829',
             height: '100%',
           }}
         >
@@ -87,7 +87,7 @@ export default function DiaryStyle() {
         <DiaryHeader />
         <div
           style={{
-            background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
+            background: 'linear-gradient(135deg, #da883b6c, #e5ac00',
             height: '100%',
           }}
         >
@@ -101,7 +101,7 @@ export default function DiaryStyle() {
         <DiaryHeader />
         <div
           style={{
-            background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
+            background: 'linear-gradient(135deg, #e860336c, #e5ac00',
             height: '100%',
           }}
         >
@@ -115,7 +115,7 @@ export default function DiaryStyle() {
         <DiaryHeader />
         <div
           style={{
-            background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
+            background: 'linear-gradient(135deg, #e1582ad5, #e500c6',
             height: '100%',
           }}
         >
@@ -129,7 +129,7 @@ export default function DiaryStyle() {
         <DiaryHeader />
         <div
           style={{
-            background: 'linear-gradient(135deg, #b1d5f770, #0b221c',
+            background: 'linear-gradient(135deg, #f34d58d2, #eb4c4c',
             height: '100%',
           }}
         >
