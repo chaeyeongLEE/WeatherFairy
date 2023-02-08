@@ -16,6 +16,7 @@ export default function Micro() {
       .then((responseData) => {
         const data = responseData.data;
         setMicroData(data.list[0].main.aqi);
+        console.log(data.list[0].main.aqi);
         setLoading(false);
       })
       .catch((error) => console.log(error));
