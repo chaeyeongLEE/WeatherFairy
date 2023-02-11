@@ -9,7 +9,7 @@ export default function Micro() {
   useEffect(() => {
     const lat = '37.5683';
     const lon = '126.9778';
-    const API_KEY = '9ee15f4b701050d4006958620f3cedec';
+    const API_KEY = 'personal key';
     const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
     axios
       .get(url)
