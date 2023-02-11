@@ -83,7 +83,7 @@ export default function Board() {
 
   useEffect(() => {
     const cityName = 'Seoul';
-    const API_KEY = '9ee15f4b701050d4006958620f3cedec';
+    const API_KEY = 'personal api key';
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
     axios
       .get(url)
