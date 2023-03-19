@@ -1,3 +1,4 @@
+<img width="1391" alt="weather" src="https://user-images.githubusercontent.com/116782324/226172638-080d8a5f-c06b-4248-b717-015e238b94b1.png">
 <h1> Weather Fairy </h1>
 <h2> 프로젝트 소개 </h2>
 <h3> 1. 기획 의도 </h3>
