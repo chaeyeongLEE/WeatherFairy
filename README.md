@@ -37,7 +37,7 @@
 <img src="https://cdn-icons-png.flaticon.com/512/3800/3800024.png" width="50"/> -->
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/>
 <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white"/>
-<img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Notion&logoColor=white"/>
+<img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white"/>
 </div>
 <h4> 🤍API🤍 </h4>
 <div>
