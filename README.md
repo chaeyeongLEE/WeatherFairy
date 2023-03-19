@@ -1,6 +1,6 @@
-<img src="/Users/chaeyeonglee/Desktop/weather.png" width="300">
-<h1> Weather Fairy </h1>
+<img src="Users/chaeyeonglee/Desktop/weather.png" width="300">
 
+<h1> Weather Fairy </h1>
 <h2> 프로젝트 소개 </h2>
 <h3> 1. 기획 의도 </h3>
 이상 기후로 인해 날씨가 오락가락하는 요즘,<br />
