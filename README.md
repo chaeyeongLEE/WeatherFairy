@@ -1,5 +1,3 @@
-<img src="Users/chaeyeonglee/Desktop/weather.png" width="300">
-
 <h1> Weather Fairy </h1>
 <h2> 프로젝트 소개 </h2>
 <h3> 1. 기획 의도 </h3>
