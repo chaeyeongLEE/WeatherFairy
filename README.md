@@ -1,4 +1,4 @@
-<img src="desktop/weather.png" width="300">
+<img src="/Users/chaeyeonglee/Desktop/weather.png" width="300">
 <h1> Weather Fairy </h1>
 
 <h2> 프로젝트 소개 </h2>
