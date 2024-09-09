@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import homeImg from '../home.png';
-import diaryImg from '../diary.png';
-import fairyImg from '../fairy.png';
+import homeImg from '../public/home.png';
+import diaryImg from '../public/diary.png';
+import fairyImg from '../public/fairy.png';
 import styled from 'styled-components';
 
 const Nav = styled.nav`

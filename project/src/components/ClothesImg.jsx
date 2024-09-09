@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import clothes1Img from '../clothes1.jpeg';
-import clothes2Img from '../clothes2.jpeg';
-import clothes3Img from '../clothes3.jpeg';
-import summer1Img from '../summer1.jpg';
-import summer2Img from '../summer2.jpg';
-import summer3Img from '../summer3.jpg';
-import summer4Img from '../summer4.jpg';
-import summer5Img from '../summer5.jpg';
+import clothes1Img from '../public/clothes1.jpeg';
+import clothes2Img from '../public/clothes2.jpeg';
+import clothes3Img from '../public/clothes3.jpeg';
+import summer1Img from '../public//summer1.jpg';
+import summer2Img from '../public//summer2.jpg';
+import summer3Img from '../public/summer3.jpg';
+import summer4Img from '../public/summer4.jpg';
+import summer5Img from '../public/summer5.jpg';
 
 const Img = styled.img`
   width: 563px;

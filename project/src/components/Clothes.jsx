@@ -7,7 +7,7 @@ const Div1 = styled.div`
   margin-left: 640px;
   text-align: center;
   min-height: 140px;
-  margin-top: '60px';
+  margin-top: 60px;
   background-color: #b1b9d5b8;
   padding: 25px;
 `;

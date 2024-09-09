@@ -1,119 +1,45 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
-import Clothes from './Clothes';
-import Micro from './Micro';
-import Location from './Location';
-import ClothesImg from './ClothesImg';
-import WeatherHeader from './WeatherHeader';
-import Header from './Header';
+import { useState, useEffect } from 'react';
 
-const DivTie = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-`;
+export default function Weather() {
+  const API_KEY = 'fa86f0cce4afc4b3fc0e9980c358f696';
+  const [position, setPosition] = useState(null);  // 위치 정보를 저장하는 상태
+  const [weatherData, setWeatherData] = useState(null);
 
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Div1 = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Div3 = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Div2 = styled.div`
-  background-color: #c9cad389;
-  width: 420px;
-  margin-top: 20px;
-  margin-left: 640px;
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
-`;
-
-class Weather extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { temp: 0, desc: '', loading: true };
-  }
-  componentDidMount() {
-    const cityName = 'Seoul';
-    const API_KEY = 'PERSONAL API KEY';
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
-    axios
-      .get(url)
-      .then((responseData) => {
-        console.log(responseData);
-        const data = responseData.data;
-        this.setState({
-          temp: data.main.temp - 273.15,
-          desc: data.weather[0].description,
-          icon: data.weather[0].icon,
-          loading: false,
+  function userPosition(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    fetch(url)
+      .then(response => response.json())
+      .then((data) => {
+        setWeatherData({
+          city: data.name,
+          weather: `${data.weather[0].main} / ${data.main.temp}°C`
         });
+        setPosition({ latitude: lat, longitude: lon });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
-  render() {
-    const imgSrc = `http://openweathermap.com/img/w/${this.state.icon}.png`;
-    let temp = this.state.temp;
-    let tC = Math.round(temp);
+  function userPositionError() {
+    alert("날씨와 위치를 확인할 수 없습니다.");
+  }
 
-    if (this.state.loading) {
-      return <p>Loading</p>;
-    } else {
-      return (
-        <DivTie>
-          <Header />
-          <Div>
-            <Div1>
-              <WeatherHeader />
-            </Div1>
-            <Div3>
-              <Location />
-              <ClothesImg temp={tC} />
-              <Div2>
-                <span
-                  style={{
-                    color: 'brown',
-                    fontSize: '22px',
-                    textShadow: '2px 2px 2px gray',
-                  }}
-                >
-                  <img
-                    src={imgSrc}
-                    alt=""
-                    style={{ height: '100px', width: '100px' }}
-                  />
-                  <p>
-                    <span>{tC}°C</span>
-                    <br />
-                    {this.state.desc}
-                  </p>
-                  <Micro />
-                </span>
-              </Div2>
-              <br />
-              <Clothes temp={tC} />
-            </Div3>
-          </Div>
-          {/* <style jsx>
-            {`
-            .Div1 {
-              color: red;
-            }
-          `}</style> */}
-        </DivTie>
-      );
-    }
-  }
+  // 컴포넌트가 마운트될 때 사용자 위치 정보를 불러옴
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(userPosition, userPositionError);
+  }, []);
+
+  return (
+    <>
+      {weatherData ? (
+        <div id="weather">
+          <span>{weatherData.weather}</span> / <span>{weatherData.city}</span>
+        </div>
+      ) : (
+        <p>위치 정보를 가져오는 중...</p>
+      )}
+    </>
+  );
 }
-export default Weather;
