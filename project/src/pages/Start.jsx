@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Weather from '../components/Weather';
 import '../styles/Start.css';
+import Header from '../components/Header';
 
 const Div = styled.div`
     display: flex;
@@ -19,6 +20,7 @@ const Div = styled.div`
 export default function Start() {
     return (
         <Div>
+            <Header />
           <Weather />
           {/*<Clothes />*/}
         </Div>

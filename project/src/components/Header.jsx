@@ -1,46 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import homeImg from '../public/home.png';
-import diaryImg from '../public/diary.png';
-import fairyImg from '../public/fairy.png';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  @media screen and (max-width: 700px) {
-    width: 45%;
-    flex-direction: column;
     display: flex;
-    text-align: center;
-    margin-left: 620px;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: pink;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+    & ul {
+        display: flex;
+        list-style: none;
+    }
+
+    & li {
+        margin-left: 30px;
+    }
+
+    @media screen and (max-width: 700px) {
+    display: flex;
   }
 `;
 
 export default function Header() {
-  const imgStyle = { width: '40px' };
   return (
-    <>
       <Nav>
-        <ul style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <li>
-            <img src={fairyImg} alt="날씨 요정" style={imgStyle}></img>
-            Weather Fairy
-          </li>
-
+        <ul>
           <li>
             <Link to="/">
-              {' '}
-              <img src={homeImg} alt="홈" style={imgStyle} />{' '}
+              home
             </Link>
           </li>
           <li>
             <Link to="/diary">
-              {' '}
-              <img src={diaryImg} alt="다이어리" style={imgStyle} />{' '}
+              다이어리
             </Link>
           </li>
         </ul>
       </Nav>
-    </>
   );
 }
