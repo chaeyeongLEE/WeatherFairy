@@ -13,14 +13,14 @@ const Div = styled.div`
       flex-direction: column;
       display: flex;
       text-align: center;
-      margin-left: -190px;
+      //margin-left: -190px;
       justify-content: flex-start;
     }
   `;
 export default function Start() {
     return (
         <Div>
-            <Header />
+            {/*<Header />*/}
           <Weather />
           {/*<Clothes />*/}
         </Div>
