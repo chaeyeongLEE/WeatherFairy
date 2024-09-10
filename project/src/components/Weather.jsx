@@ -34,11 +34,11 @@ export default function Weather() {
   return (
     <>
       {weatherData ? (
-        <div id="weather">
+        <>
           <span>{weatherData.weather}</span> / <span>{weatherData.city}</span>
-        </div>
+        </>
       ) : (
-        <p>위치 정보를 가져오는 중...</p>
+        <p>위치 정보를 가져오는 중입니다</p>
       )}
     </>
   );

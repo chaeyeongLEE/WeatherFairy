@@ -6,25 +6,15 @@ const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: pink;
-    height: 70px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    
     & ul {
         display: flex;
         list-style: none;
+        gap: 20px;
     }
-
-    & li {
-        margin-left: 30px;
-    }
-
-    @media screen and (max-width: 700px) {
-    display: flex;
-  }
 `;
 
 export default function Header() {
