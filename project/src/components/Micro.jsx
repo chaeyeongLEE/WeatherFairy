@@ -9,14 +9,14 @@ export default function Micro() {
   useEffect(() => {
     const lat = '37.5683';
     const lon = '126.9778';
-    const API_KEY = 'personal key';
+    const API_KEY = 'fa86f0cce4afc4b3fc0e9980c358f696';
     const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
     axios
       .get(url)
       .then((responseData) => {
         const data = responseData.data;
         setMicroData(data.list[0].main.aqi);
-        console.log(data.list[0].main.aqi);
+        console.log('미먼:',data.list[0].main.aqi);
         setLoading(false);
       })
       .catch((error) => console.log(error));

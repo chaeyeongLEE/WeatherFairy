@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function Weather() {
   const API_KEY = 'fa86f0cce4afc4b3fc0e9980c358f696';
@@ -11,6 +12,31 @@ export default function Weather() {
     const lon = position.coords.longitude;
     setPosition({ latitude: lat, longitude: lon });
     console.log('position:', position);
+
+    //위치정보가 업데이트된 뒤에 날씨 정보 받기
+    getWeather(lat, lon);
+    // getMicroInfo(lat, lon);
+  }
+
+  function getWeather(lat, lon) {
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    axios.get(weatherUrl).then((responseData) => {
+      const data = responseData.data;
+      setWeatherData({
+        city: data.name,
+        weather: `${data.weather[0].main} / ${data.main.temp}°C`
+      });
+    })
+    .catch((error) => console.log(error));
+  }
+
+  function getMicroInfo(lat, lon) {
+    const microUrl = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    axios.get(microUrl).then((responseData) => {
+        const data = responseData.data;
+        setMicroData(data.list[0].main.aqi);
+      })
+      .catch((error) => console.log(error));
   }
 
   function userPosition(position) {
@@ -36,14 +62,15 @@ export default function Weather() {
 
   // 컴포넌트가 마운트될 때 사용자 위치 정보를 불러옴
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(userPosition, userPositionError);
+    navigator.geolocation.getCurrentPosition(userPositions, userPositionError);
   }, []);
 
   return (
     <>
       {weatherData ? (
         <>
-          <span>{weatherData.weather}</span> / <span>{weatherData.city}</span>
+          <p>{weatherData.weather}</p> / <span>{weatherData.city}</span>
+          {/*<p>{weatherData}</p>*/}
         </>
       ) : (
         <p>위치 정보를 가져오는 중입니다</p>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
 import Weather from '../components/Weather';
+import Micro from '../components/Micro';
 
 const Div = styled.div`
     display: flex;
@@ -20,6 +21,7 @@ export default function Start() {
           <Header />
           <Main>
             <Weather />
+            {/*<Micro />*/}
           </Main>
           {/*<Clothes />*/}
           <Footer />
