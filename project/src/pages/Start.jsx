@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
-import Weather from '../components/Weather';
+import Weather2 from '../components/Weather2';
 import Micro from '../components/Micro';
 
 const Div = styled.div`
@@ -20,7 +20,7 @@ export default function Start() {
         <Div>
           <Header />
           <Main>
-            <Weather />
+            <Weather2 />
             {/*<Micro />*/}
           </Main>
           {/*<Clothes />*/}
