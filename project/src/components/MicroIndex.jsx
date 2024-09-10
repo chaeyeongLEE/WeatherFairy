@@ -1,37 +1,27 @@
 import React from 'react';
 
-export default function MicroIndex(data) {
-  const mD = data.data;
-  console.log('data.microData : ' + data.data);
-  if (mD < 6) {
-    return (
-      <>
-        <p>미세먼지: 매우 나쁨</p>
-      </>
-    );
-  } else if (mD < 5) {
-    return (
-      <>
-        <p>미세먼지: 나쁨</p>
-      </>
-    );
-  } else if (mD < 4) {
-    return (
-      <>
-        <p>미세먼지: 보통 </p>
-      </>
-    );
-  } else if (mD < 3) {
-    return (
-      <>
-        <p>미세먼지: 좋음</p>
-      </>
-    );
-  } else if (mD < 2) {
-    return (
-      <>
-        <p>미세먼지: 매우 좋음</p>
-      </>
-    );
-  }
-}
+  export default function MicroIndex({ data }){
+    const microData = data.aqi;
+
+    function getMicroInfo() {
+      if (microData >= 6) {
+        return '매우나쁨';
+      } else if (5 <= microData && microData < 6) {
+        return '나쁨';
+      } else if (4 <= microData && microData < 5) {
+        return '보통';
+      } else if (3 <= microData && microData < 4) {
+        return '좋음';
+      } else if (2 <= microData && microData < 3) {
+        return '매우 좋음';
+      } else {
+        return '미세먼지 정보를 받아옵니다.';
+      }
+    }
+
+    const message = getMicroInfo();
+  return (<>
+      <p>오늘의 미세먼지는 {message} 입니다.</p>
+    </>
+  )
+  };

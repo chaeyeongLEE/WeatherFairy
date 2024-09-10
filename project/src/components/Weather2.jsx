@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MicroIndex from './MicroIndex';
 
 export default function Weather() {
   const API_KEY = 'fa86f0cce4afc4b3fc0e9980c358f696';
@@ -41,12 +42,12 @@ export default function Weather() {
     <>
       {weatherData ? (
         <>
-          <p>{weatherData.weather}</p> / <span>{weatherData.city}</span>
-          <p>{microData.aqi}</p>
+          <p>{weatherData.weather} / {weatherData.city} </p>
         </>
       ) : (
         <p>위치 정보를 가져오는 중입니다</p>
       )}
+      {microData ? <MicroIndex data={microData} /> : null}
     </>
   );
 }

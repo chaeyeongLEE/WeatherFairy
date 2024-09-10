@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
 import Weather2 from '../components/Weather2';
-import Micro from '../components/Micro';
 
 const Div = styled.div`
     display: flex;
