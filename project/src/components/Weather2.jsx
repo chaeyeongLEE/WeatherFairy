@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import MicroIndex from './MicroIndex';
+import Loading from '../layout/Lodaing';
 
 export default function Weather() {
   const API_KEY = 'fa86f0cce4afc4b3fc0e9980c358f696';
   const [position, setPosition] = useState(null);  // 위치 정보를 저장하는 상태
   const [weatherData, setWeatherData] = useState(null);
   const [microData, setMicroData] = useState(null);
-  // 1. 사용자 위치 정보 받기 2.날씨받아오기 3. 미세먼지 농도 받아오기 (각각 다른 함수로)
+  const [loading, setLoading] = useState(true);
+
   function userPosition(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
@@ -17,7 +18,9 @@ export default function Weather() {
 
   function userPositionError() {
     alert("날씨와 위치를 확인할 수 없습니다.");
+    setLoading(true);
   }
+
   function getWeatherMicro(lat, lon) {
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     const microUrl = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
@@ -27,10 +30,12 @@ export default function Weather() {
       fetch(microUrl).then(res=>res.json()),
     ]). then(([weatherRes, microRes])=> {
       setWeatherData({city: weatherRes.name, weather: `${weatherRes.weather[0].main} / ${weatherRes.main.temp}°C`});
-      setMicroData({aqi: microRes.list[0].main.aqi})
+      setMicroData({aqi: microRes.list[0].main.aqi});
+      setLoading(false);
     })
     .catch((error) => {
       console.log('error:', error);
+      setLoading(true);
     });
   }
 
@@ -44,9 +49,9 @@ export default function Weather() {
         <>
           <p>{weatherData.weather} / {weatherData.city} </p>
         </>
-      ) : (
-        <p>위치 정보를 가져오는 중입니다</p>
-      )}
+      ) :  <Loading /> }
+      {/*(!loading ? <Loading /> : <p>날씨 정보를 받아오는 데에 오류가 발생했습니다.</p>)*/}
+      {/*위 코드는 api 응답값에 분기처리를 해야할 듯함. 지금은 useState를 통해 error가 있느냐없느냐를 통해서 해야할듯*/}
       {microData ? <MicroIndex data={microData} /> : null}
     </>
   );

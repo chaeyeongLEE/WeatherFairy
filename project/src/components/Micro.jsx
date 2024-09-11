@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MicroIndex from './MicroIndex';
+import Loading from '../layout/Lodaing';
 
 export default function Micro() {
   const [microData, setMicroData] = useState('');
@@ -16,14 +17,12 @@ export default function Micro() {
       .then((responseData) => {
         const data = responseData.data;
         setMicroData(data.list[0].main.aqi);
-        console.log('미먼:',data.list[0].main.aqi);
-        setLoading(false);
       })
       .catch((error) => console.log(error));
   }, []);
 
   if (loading) {
-    return <p>Loading</p>;
+    return <Loading />;
   } else {
     return (
       <>
