@@ -15,14 +15,14 @@
 .background{
   width: 200%;
   height: 900px;
-  background-image: url(../back.png);
+  background-image: url(../public/back.png);
   z-index: -9999;
   position: absolute;
   background-size: cover;
 }
 @media screen and (max-width: 700px) {.background{
 height:1400px;
-background-image: url(../back.png);
+background-image: url(../public/back.png);
 }
   
 }

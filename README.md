@@ -17,7 +17,7 @@
 |API|1. 서울 현재 기온, 날씨 아이콘, 날씨 설명 데이터 구현<br />(OpenWeather_weather)<br>2. 위도, 경도 설정, 미세먼지 데이터를 5단계로 나누어 구현<br />(OpenWeather_air_pollution)|
 
 <h3> 🤍 배포 사이트 🤍 </h3>
-<a href="http://101.101.208.182:3000/"><img src="project/src/fairy.png" width="70"></a>
+<a href="http://101.101.208.182:3000/"><img src="project/src/public/fairy.png" width="70"></a>
 
 <h1> 🧚🏻 프로젝트 팀원 🧚🏻 </h1>
 
