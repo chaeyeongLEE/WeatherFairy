@@ -18,7 +18,6 @@ import React from 'react';
         return '미세먼지 정보를 받아옵니다.';
       }
     }
-
     const message = getMicroInfo();
   return (<>
       <p>오늘의 미세먼지는 {message} 입니다.</p>
