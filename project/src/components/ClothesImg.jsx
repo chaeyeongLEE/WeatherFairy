@@ -22,6 +22,7 @@ const Img = styled.img`
     width: 450px;
   }
 `;
+
 export default function ClothesImg(temp) {
   const tC = parseInt(temp.temp);
   console.log(tC);
