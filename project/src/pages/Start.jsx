@@ -29,7 +29,6 @@ export default function Start() {
     setBackImg(randomImage);
   }, []);
 
-
     return (
         <Div bgImage={backImg}>
           <Header />
