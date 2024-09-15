@@ -61,9 +61,8 @@ export default function Weather() {
     navigator.geolocation.getCurrentPosition(userPosition, userPositionError);
   }, []);
 
-  useEffect(() => {
-    preWeatherData();
-  }, []);
+
+
 
   return (
     <>
