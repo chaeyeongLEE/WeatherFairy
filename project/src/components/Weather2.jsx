@@ -11,15 +11,14 @@ export default function Weather() {
   const [weatherData, setWeatherData] = useState(null);
   const [microData, setMicroData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [preweatherData, setPreWeatherData] = useState(null);
+  const [preWeatherDatas, setPreWeatherDatas] = useState(null);
 
   function preWeatherData() {
     const apiUrl = 'https://apihub.kma.go.kr/api/typ01/url/fct_medm_reg.php?tmfc=0&authKey=ij2xlxFnS3m9sZcRZ4t50Q';
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        console.log('data:', data);
-        setPreWeatherData(data);
+        setPreWeatherDatas(data);
       })
       .catch(error => {
         console.error("Error:", error);
@@ -61,17 +60,13 @@ export default function Weather() {
     navigator.geolocation.getCurrentPosition(userPosition, userPositionError);
   }, []);
 
-  useEffect(() => {
-    preWeatherData();
-  }, []);
-
   return (
     <>
       {weatherData ? (
         <>
           <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp}</p>
           <Clothes temp={weatherData.temp} />
-          <span>{preWeatherData ? preWeatherData : 'NOne'}</span>
+          <span>{preWeatherDatas ? preWeatherDatas : 'None'}</span>
         </>
       ) : <Loading />}
       {/*(!loading ? <Loading /> : <p>날씨 정보를 받아오는 데에 오류가 발생했습니다.</p>)*/}
