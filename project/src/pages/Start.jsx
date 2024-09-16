@@ -28,12 +28,18 @@ export default function Start() {
     const randomImage = backImgArray[Math.floor(Math.random() * backImgArray.length)];
     setBackImg(randomImage);
   }, []);
+  const [city, setCity] = useState('');
 
+  // Weather 컴포넌트에서 전달받은 city 값을 업데이트하는 함수
+  const getCity = (cityName) => {
+    setCity(cityName);
+    console.log('city', cityName);
+  };
     return (
         <Div bgImage={backImg}>
-          <Header />
+          <Header city={city} />
           <Main>
-            <Weather2 />
+            <Weather2 getCity={getCity} />
             {/*<Micro />*/}
           </Main>
           {/*<Clothes />*/}
