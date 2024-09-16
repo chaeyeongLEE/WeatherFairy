@@ -3,7 +3,7 @@ import MicroIndex from './MicroIndex';
 import Loading from '../layout/Lodaing';
 import Clothes from './Clothes';
 
-export default function Weather() {
+export default function Weather({getCity}) {
   const API_KEY = 'fa86f0cce4afc4b3fc0e9980c358f696';
   const MY_AUTH_KEY = 'ij2xlxFnS3m9sZcRZ4t50Q';
 
@@ -45,9 +45,16 @@ export default function Weather() {
       fetch(weatherUrl).then(res=>res.json()),
       fetch(microUrl).then(res=>res.json()),
     ]). then(([weatherRes, microRes])=> {
-      setWeatherData({city: weatherRes.name, weather: weatherRes.weather[0].main, temp: `${weatherRes.main.temp}°C`});
+      setWeatherData({city: weatherRes.name,
+        weather: weatherRes.weather[0].main,
+        temp: `${weatherRes.main.temp}°C`,
+        suntime: weatherRes.sys,
+        timeZone: weatherRes.timezone,
+      }
+        );
       setMicroData({aqi: microRes.list[0].main.aqi});
       setLoading(false);
+      getCity(weatherRes.name);
     })
     .catch((error) => {
       console.log('error:', error);
@@ -55,7 +62,15 @@ export default function Weather() {
     });
   }
 
-  // 컴포넌트가 마운트될 때 사용자 위치 정보를 불러옴
+  // 밀리초 단위로 변환한 뒤 타임존을 추가
+  const localSunrise = new Date((weatherData.suntime.sunrise + weatherData.timeZone) * 1000);
+  // 시간을 보기 좋게 출력
+  const hours = localSunrise.getUTCHours();
+  const minutes = localSunrise.getUTCMinutes();
+  const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+
+  console.log('formattedTime:', formattedTime);  // 예: 07:30
+ // 컴포넌트가 마운트될 때 사용자 위치 정보를 불러옴
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(userPosition, userPositionError);
   }, []);
@@ -64,7 +79,7 @@ export default function Weather() {
     <>
       {weatherData ? (
         <>
-          <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp}</p>
+          <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp} / 햇빛은 {weatherData.suntime.sunrise} </p>
           <Clothes temp={weatherData.temp} />
           <span>{preWeatherDatas ? preWeatherDatas : 'None'}</span>
         </>
