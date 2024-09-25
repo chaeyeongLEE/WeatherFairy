@@ -48,8 +48,8 @@ export default function Weather({getCity}) {
       setWeatherData({city: weatherRes.name,
         weather: weatherRes.weather[0].main,
         temp: `${weatherRes.main.temp}°C`,
-        suntime: weatherRes.sys,
-        timeZone: weatherRes.timezone,
+        sunTime: weatherRes.sys,
+        timezone: weatherRes.timezone,
       }
         );
       setMicroData({aqi: microRes.list[0].main.aqi});
@@ -63,7 +63,7 @@ export default function Weather({getCity}) {
   }
 
   // 밀리초 단위로 변환한 뒤 타임존을 추가
-  const localSunrise = new Date((weatherData.suntime.sunrise + weatherData.timeZone) * 1000);
+  const localSunrise = new Date((weatherData?.sunTime.sunrise + weatherData?.timezone) * 1000);
   // 시간을 보기 좋게 출력
   const hours = localSunrise.getUTCHours();
   const minutes = localSunrise.getUTCMinutes();
@@ -79,7 +79,7 @@ export default function Weather({getCity}) {
     <>
       {weatherData ? (
         <>
-          <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp} / 햇빛은 {weatherData.suntime.sunrise} </p>
+          <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp} / 햇빛은 {weatherData?.sunTime?.sunrise} </p>
           <Clothes temp={weatherData.temp} />
           <span>{preWeatherDatas ? preWeatherDatas : 'None'}</span>
         </>
