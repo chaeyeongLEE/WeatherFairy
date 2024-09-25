@@ -4,7 +4,7 @@ import Header from '../layout/Header';
 import Footer from '../layout/Footer';
 import Weather2 from '../components/Weather2';
 import backImg1 from '../public/sunsetImg.jpeg'
-import backImg2 from '../public/greenBackImg.jpeg'
+import backImg2 from '../public/winter.jpeg'
 import backImg3 from '../public/sunset2.jpeg'
 
 const Div = styled.div`
