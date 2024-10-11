@@ -33,7 +33,6 @@ export default function Start() {
   // Weather 컴포넌트에서 전달받은 city 값을 업데이트하는 함수
   const getCity = (cityName) => {
     setCity(cityName);
-    console.log('city', cityName);
   };
     return (
         <Div bgImage={backImg}>

@@ -25,7 +25,7 @@ const Img = styled.img`
 export default function Clothes({ temp }) {
   // 문자열을 정수로 변환하기
   const tC = parseInt(temp);
-  console.log('tc:', tC);
+  // console.log('tc:', tC);
   function getWeatherInfo(tc) {
     if (tc < 5) {
       return '날씨가 많이 춥습니다. 두툼한 겨울 의류, 보완이 철저한 외투를 입으세요.<br />' +

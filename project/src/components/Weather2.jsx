@@ -69,7 +69,6 @@ export default function Weather({getCity}) {
   const minutes = localSunrise.getUTCMinutes();
   const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 
-  console.log('formattedTime:', formattedTime);  // 예: 07:30
  // 컴포넌트가 마운트될 때 사용자 위치 정보를 불러옴
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(userPosition, userPositionError);
@@ -79,7 +78,7 @@ export default function Weather({getCity}) {
     <>
       {weatherData ? (
         <>
-          <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp} / 햇빛은 {weatherData?.sunTime?.sunrise} </p>
+          <p>{weatherData.weather} / {weatherData.city} / 온도는 {weatherData.temp} / 일출시각은 {formattedTime? formattedTime: ''} </p>
           <Clothes temp={weatherData.temp} />
           <span>{preWeatherDatas ? preWeatherDatas : 'None'}</span>
         </>
